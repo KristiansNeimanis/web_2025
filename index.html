@@ -32,26 +32,26 @@
         let secondNumValue = Number(secondNumInput.value);
         let operatorValue = operatorInput.value;
 
-        function calculateRes(n1, n2, op) {
-          switch (op) {
-            case "+":
-              return n1 + n2;
-
-            case "-":
-              return n1 - n2;
-
-            case "*":
-              return n1 * n2;
-
-            case "/":
-              if (n1 == 0 || n2 == 0) {
-                console.log("Cant devide by 0");
-                break;
-              }
-              return n1 / n2;
-            default:
-              return "Unkown operator";
-          }
+        switch (operatorValue) {
+          case "+":
+            console.log(firstNumValue + secondNumValue);
+            break;
+          case "-":
+            console.log(firstNumValue - secondNumValue);
+            break;
+          case "*":
+            console.log(firstNumValue * secondNumValue);
+            break;
+          case "/":
+            if (firstNumValue == 0 || secondNumValue == 0) {
+              console.log("Cant devide by 0");
+              break;
+            }
+            console.log(firstNumValue / secondNumValue);
+            break;
+          default:
+            console.log("Unkown operator");
+            break;
         }
       }
     </script>
