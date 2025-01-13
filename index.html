@@ -9,11 +9,11 @@
     <h1>Kalkulators</h1>
 
     <label for="num1">First number:</label>
-    <input type="number" name="num1" id="num1" />
+    <input type="number" name="num1" id="num1" placeholder="0" />
     <label for="operator">Operator:</label>
-    <input type="text" name="operator" id="operator" />
+    <input type="text" name="operator" id="operator" placeholder="+, -, /, *" />
     <label for="num2">Second number:</label>
-    <input type="number" name="num2" id="num2" />
+    <input type="number" name="num2" id="num2" placeholder="0" />
 
     <button id="btn_cal">Calculate</button>
 
@@ -21,10 +21,16 @@
       const btnCal = document.getElementById("btn_cal");
       //const btnCal = document.querySelector("btn_cal");
 
+      const FirstNumInput = document.getElementById("num1");
+      const SecondNumInput = document.getElementById("num2");
+      const OperatorNInput = document.getElementById("operator");
+
       btnCal.addEventListener("click", handelClick);
 
       function handelClick() {
-        console.log("clicked");
+        let firstNumValue = FirstNumInput.value;
+        let secondNumValue = SecondNumInput.value;
+        let operatorValue = OperatorNInput.value;
       }
     </script>
   </body>
