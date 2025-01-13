@@ -8,15 +8,24 @@
   <body>
     <h1>Kalkulators</h1>
 
-    <form action="" method="get">
-      <label for="num1">First number:</label>
-      <input type="number" name="num1" id="num1" />
-      <label for="operator">Operator:</label>
-      <input type="text" name="operator" id="operator" />
-      <label for="num2">Second number:</label>
-      <input type="number" name="num2" id="num2" />
+    <label for="num1">First number:</label>
+    <input type="number" name="num1" id="num1" />
+    <label for="operator">Operator:</label>
+    <input type="text" name="operator" id="operator" />
+    <label for="num2">Second number:</label>
+    <input type="number" name="num2" id="num2" />
 
-      <input type="submit" value="Submit" />
-    </form>
+    <button id="btn_cal">Calculate</button>
+
+    <script>
+      const btnCal = document.getElementById("btn_cal");
+      //const btnCal = document.querySelector("btn_cal");
+
+      btnCal.addEventListener("click", handelClick);
+
+      function handelClick() {
+        console.log("clicked");
+      }
+    </script>
   </body>
 </html>
