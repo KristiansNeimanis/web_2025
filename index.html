@@ -21,16 +21,42 @@
       const btnCal = document.getElementById("btn_cal");
       //const btnCal = document.querySelector("btn_cal");
 
-      const FirstNumInput = document.getElementById("num1");
-      const SecondNumInput = document.getElementById("num2");
-      const OperatorNInput = document.getElementById("operator");
+      const firstNumInput = document.getElementById("num1");
+      const secondNumInput = document.getElementById("num2");
+      const operatorInput = document.getElementById("operator");
 
+      const OutputConainer = document.getElementById();
       btnCal.addEventListener("click", handelClick);
 
       function handelClick() {
-        let firstNumValue = FirstNumInput.value;
-        let secondNumValue = SecondNumInput.value;
-        let operatorValue = OperatorNInput.value;
+        let firstNumValue = Number(firstNumInput.value);
+        let secondNumValue = Number(secondNumInput.value);
+        let operatorValue = operatorInput.value;
+
+        switch (operatorValue) {
+          case "+":
+            console.log(firstNumValue + secondNumValue);
+            break;
+
+          case "-":
+            console.log(firstNumValue - secondNumValue);
+            break;
+
+          case "*":
+            console.log(firstNumValue * secondNumValue);
+            break;
+
+          case "/":
+            if (firstNumValue == 0 || secondNumValue == 0) {
+              console.log("Cant devide by 0");
+              break;
+            }
+            console.log(firstNumValue / secondNumValue);
+            break;
+          default:
+            console.log("Unkown operator");
+            break;
+        }
       }
     </script>
   </body>
